@@ -6,7 +6,7 @@ At this time, Unity 3D support is experimental and some features may not work. S
 
 ## Dig the code ##
 
-The .NET code is located inside the Assets/Sources directory.<br>
+The .NET code should be located inside the Assets/Sources directory.<br>
 Specifically, Lightstreamer connection information is defined inside LightningBolt.cs (pushServerHost, items, fields).
 LightstreamerClient.cs, ILightstreamerListener.cs, StocklistConnectionListener.cs and StocklistHandyTableListener.cs are the Lightstreamer bits in this demo.
 
@@ -16,13 +16,13 @@ LightstreamerClient.cs, ILightstreamerListener.cs, StocklistConnectionListener.c
 
 Check out the sources for further explanations. The Lightstreamer Documentation is available at: http://www.lightstreamer.com/doc<br>
 
-<i>NOTE: not all the functionalities of the modified Lightstreamer .NET Client Library are exposed by the classes listed above. You can easily expand those functionalities using the Lightstreamer .NET Client API as a reference. </i>
+<i>NOTE: not all the functionalities of the modified Lightstreamer .NET Client Library are exposed by the classes listed above. You can easily expand those functionalities using the [Lightstreamer .NET Client API](http://www.lightstreamer.com/docs/client_dotnet_api/frames.html) as a reference. </i>
 
 For any inquiry, please email support@lightstreamer.com.
 
 # Build #
 
-The Unity 3D Development platform must be installed in order to build and run this demo. This package contains a modified version of the official Unity 3D demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
+The Unity 3D Development platform must be installed in order to build and run this demo. This apply to a modified version of the official Unity 3D demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
 
 ## Getting started, Compile & Run ##
 
