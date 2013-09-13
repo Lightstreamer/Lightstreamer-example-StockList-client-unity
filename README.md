@@ -34,7 +34,7 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 
 # See Also #
 
-## Lightstreamer Adapters needed by these demo clients ##
+## Lightstreamer Adapters needed by this demo client ##
 
 * [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer Reusable Metadata Adapter in Java](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
@@ -51,3 +51,4 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 # Lightstreamer Compatibility Notes #
 
 - Compatible with Lightstreamer .NET Client API version 2.1 or newer.
+- For Lightstreamer Allegro+, Presto, Vivace.
