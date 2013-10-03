@@ -51,4 +51,4 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 # Lightstreamer Compatibility Notes #
 
 - Compatible with Lightstreamer .NET Client API version 2.1 or newer.
-- For Lightstreamer Allegro+, Presto, Vivace.
+- For Lightstreamer Allegro (+ .NET Client API support), Presto, Vivace.
