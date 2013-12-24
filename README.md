@@ -1,5 +1,7 @@
 # Lightstreamer - Stock-List Demo - Unity Client #
 
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+
 This project includes a demo client showing the integration between a modified version of the Lightstreamer .NET Client Library and the Unity 3D Development platform.<br>
 
 At this time, Unity 3D support is experimental and some features may not work. Specifically, the Web Player build (the non-NaCL version) is known to NOT work. Moreover, the Android build fails due to errors in the original Unity 3D code.
@@ -20,6 +22,8 @@ Check out the sources for further explanations. The Lightstreamer Documentation 
 
 For any inquiry, please email support@lightstreamer.com.
 
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+
 # Build #
 
 The Unity 3D Development platform must be installed in order to build and run this demo. This apply to a modified version of the official Unity 3D demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
@@ -36,8 +40,11 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 
 ## Lightstreamer Adapters needed by this demo client ##
 
+<!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer - Reusable Metadata Adapters- Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+
+<!-- END RELATED_ENTRIES -->
 
 ## Similar demo clients that may interest you ##
 
