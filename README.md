@@ -6,7 +6,7 @@ This project includes a demo client showing the integration between a modified v
 
 At this time, Unity 3D support is experimental and some features may not work. Specifically, the Web Player build (the non-NaCL version) is known to NOT work. Moreover, the Android build fails due to errors in the original Unity 3D code.
 
-## Dig the code ##
+## Dig the Code ##
 
 The .NET code should be located inside the Assets/Sources directory.<br>
 Specifically, Lightstreamer connection information is defined inside LightningBolt.cs (pushServerHost, items, fields).
@@ -28,7 +28,7 @@ For any inquiry, please email support@lightstreamer.com.
 
 The Unity 3D Development platform must be installed in order to build and run this demo. This apply to a modified version of the official Unity 3D demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
 
-## Getting started, Compile & Run ##
+## Getting Started, Compile & Run ##
 
 * Download and Install Unity 3D from: [http://unity3d.com/unity/download](http://unity3d.com/unity/download)
 * Download the [complete Unity project](http://www.lightstreamer.com/download/1060/) of this demo from the "From the Labs -> Lightstreamer Library for Unity Clients" section of [Lightstreamer download page](http://www.lightstreamer.com/download). 
@@ -38,7 +38,7 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 
 # See Also #
 
-## Lightstreamer Adapters needed by this demo client ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 
 <!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
@@ -46,7 +46,7 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 
 <!-- END RELATED_ENTRIES -->
 
-## Similar demo clients that may interest you ##
+## Related Projects ##
 
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 * [Lightstreamer - Basic Stock-List Demo - jQuery (jqGrid) Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-jquery)
@@ -55,7 +55,6 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 * [Lightstreamer - Basic Stock-List Demo - .NET Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-dotnet)
 * [Lightstreamer - Stock-List Demos - Flex Clients](https://github.com/Weswit/Lightstreamer-example-StockList-client-flex)
 * [Lightstreamer - Basic Stock-List Demo - Silverlight Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-silverlight)
-
 
 # Lightstreamer Compatibility Notes #
 
