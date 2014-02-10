@@ -1,6 +1,6 @@
 # Lightstreamer - Stock-List Demo - Unity Client #
 
-<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 This project includes a demo client showing the integration between a modified version of the [Lightstreamer .NET Client Library](http://www.lightstreamer.com/docs/client_dotnet_api/frames.html) and the Unity 3D Development platform.<br>
 
@@ -22,7 +22,7 @@ Check out the sources for further explanations. The Lightstreamer Documentation 
 
 For any inquiry, please email support@lightstreamer.com.
 
-<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 # Build #
 
