@@ -1,6 +1,6 @@
 # Lightstreamer - Stock-List Demo - Unity Client #
 
-<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 This project includes a demo client showing the integration between a modified version of the [Lightstreamer .NET Client Library](http://www.lightstreamer.com/docs/client_dotnet_api/frames.html) and the Unity 3D Development platform.<br>
 
@@ -8,7 +8,7 @@ At this time, Unity 3D support is experimental and some features may not work. S
 
 ## Dig the Code ##
 
-The .NET code should be located inside the Assets/Sources directory.<br>
+The .NET code is located inside the `Assets/Sources` directory.<br>
 Specifically, Lightstreamer connection information is defined inside LightningBolt.cs (pushServerHost, items, fields).
 LightstreamerClient.cs, ILightstreamerListener.cs, StocklistConnectionListener.cs and StocklistHandyTableListener.cs are the Lightstreamer bits in this demo.
 
@@ -22,19 +22,26 @@ Check out the sources for further explanations. The Lightstreamer Documentation 
 
 For any inquiry, please email support@lightstreamer.com.
 
-<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 # Build #
 
-The Unity 3D Development platform must be installed in order to build and run this demo. This apply to a modified version of the official Unity 3D demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
+The Unity 3D Development platform must be installed in order to build and run this demo. 
+This demo is a modified version of the official Unity [Procedural Examples] (https://www.assetstore.unity3d.com/#/content/5141) demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
 
 ## Getting Started, Compile & Run ##
 
 * Download and Install Unity 3D from: [http://unity3d.com/unity/download](http://unity3d.com/unity/download)
-* Download the [complete Unity project](http://www.lightstreamer.com/download/1060/) of this demo from the "From the Labs -> Lightstreamer Library for Unity Clients" section of [Lightstreamer download page](http://www.lightstreamer.com/download). 
-* Open "Assets/Lightning bolt.unity" double clicking on it. The Unity Development Environment should open.
+* Clone this project: `> git clone https://github.com/Weswit/Lightstreamer-example-StockList-client-unity`
+* Open `Assets/Lightning bolt.unity` double clicking on it. The Unity Development Environment should open.
 
 You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
+
+## Running your own Lightstreamer Server ##
+
+If you intend to change the pushServerHost variable inside LightningBolt.cs,  pointing the demo to your own Lightstreamer Server, you are also required to run a Socket Policy Server on the same host, as explained at [Security Sandbox of the Webplayer] (http://unity3d.com/support/documentation/Manual/Security%20Sandbox.html)
+
+Unity 3D provides a C# based Policy Server. However, a Java-based version of the Policy Server is provided with this demo and is available inside the `SocketPolicyServer` directory.
 
 # See Also #
 
