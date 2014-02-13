@@ -1,8 +1,10 @@
 # Lightstreamer - Stock-List Demo - Unity Client #
 
-<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 This project includes a demo client showing the integration between a modified version of the [Lightstreamer .NET Client Library](http://www.lightstreamer.com/docs/client_dotnet_api/frames.html) and the Unity 3D Development platform.<br>
+
+[![Demo ScreenShot](screen_unity_large.png)](http://demos.lightstreamer.com/UnityDemo)<br>
 
 At this time, Unity 3D support is experimental and some features may not work. Specifically, the Web Player build (the non-NaCL version) is known to NOT work. Moreover, the Android build fails due to errors in the original Unity 3D code.
 
@@ -22,7 +24,7 @@ Check out the sources for further explanations. The Lightstreamer Documentation 
 
 For any inquiry, please email support@lightstreamer.com.
 
-<!-- START DESCRIPTION lightstreamer-example-stocklist-client-unity -->
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-unity -->
 
 # Build #
 
