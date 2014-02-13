@@ -42,6 +42,7 @@ You can then Build & Run the "Lightning Bolt" project for Windows or MacOSX.
 If you intend to change the pushServerHost variable inside LightningBolt.cs,  pointing the demo to your own Lightstreamer Server, you are also required to run a Socket Policy Server on the same host, as explained at [Security Sandbox of the Webplayer] (http://unity3d.com/support/documentation/Manual/Security%20Sandbox.html)
 
 Unity 3D provides a C# based Policy Server. However, a Java-based version of the Policy Server is provided with this demo and is available inside the `SocketPolicyServer` directory.
+In order to use the Java-based version of the Policy Server: compile it with command `javac Sockpol.java` and launch it with command `java Sockpol cdpolicy.xml`.
 
 # See Also #
 
