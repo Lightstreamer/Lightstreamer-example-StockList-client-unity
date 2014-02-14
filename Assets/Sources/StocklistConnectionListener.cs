@@ -23,17 +23,16 @@ class StocklistConnectionListener : IConnectionListener
 	private ReaderWriterLock rwlock = new ReaderWriterLock();
 	private const int lockt = 15000;
 
-    public StocklistConnectionListener(ILightstreamerListener listener)
+    public StocklistConnectionListener()
     {
-        if (listener == null)
-        {
-            throw new ArgumentNullException("listener");
-        }
-		listeners.Add(listener);
     }
 
 	public void AppendListener(ILightstreamerListener listener)
 	{
+		if (listener == null)
+		{
+			throw new ArgumentNullException("listener");
+		}
 		rwlock.AcquireWriterLock(lockt);
 		try
 		{

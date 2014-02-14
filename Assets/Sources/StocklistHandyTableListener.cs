@@ -10,17 +10,16 @@ class StocklistHandyTableListener : IHandyTableListener
 	private ReaderWriterLock rwlock = new ReaderWriterLock();
 	private const int lockt = 15000;
 
-    public StocklistHandyTableListener(ILightstreamerListener listener)
+    public StocklistHandyTableListener()
     {
-        if (listener == null)
-        {
-            throw new ArgumentNullException("listener");
-        }
-        listeners.Add(listener);
     }
 
 	public void AppendListener(ILightstreamerListener listener)
 	{
+		if (listener == null)
+		{
+			throw new ArgumentNullException("listener");
+		}
 		rwlock.AcquireWriterLock(lockt);
 		try
 		{

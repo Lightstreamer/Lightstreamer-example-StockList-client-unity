@@ -26,7 +26,11 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 	private bool textMeshFound = false;
 	private string textMeshStr = null;
 	private string currentTextMeshStr = null;
+
+	private SubscribedTableKey tableKey;
 	
+	string suscribedItemName = null;
+
 	class LightstreamerSingleton
 	{
 
@@ -35,51 +39,32 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 		private static object mutex = new object();
 		
 	    private const string pushServerHost = "http://push.lightstreamer.com:80";
-	    private static string[] items = {"item1", "item2", "item3", "item4", "item5",
-			"item6", "item7", "item8", "item9", "item10"};
 	    private static string[] fields = {"stock_name", "last_price" };
 
-		public static LightstreamerClient Startup(ILightstreamerListener listener)
+		public static SubscribedTableKey Startup(ILightstreamerListener listener, string[] items)
 		{
 			lock(mutex)
 			{
 				if (client == null)
 				{
-					Debug.Log("Loading Lightstreamer Singleton, previous: " + client);
-					client = new LightstreamerClient(listener, items, fields);
-					ThreadStart ts = new ThreadStart(Start);
-					Thread th = new Thread(ts);
-					Debug.Log("Loading Lightstreamer Singleton thread...");
-					th.Start();
+					Debug.Log("Loading Lightstreamer Singleton");
+					client = new LightstreamerClient();
+					client.Start(pushServerHost);
 				}
-				else
-				{
-					// only append the listener
-					client.AppendListener(listener);
-				}
-				return client;
+				SubscribedTableKey tableKey = client.AppendListener(listener, items, fields);
+				return tableKey;
 			}
 		}
 
-		public static void Stop()
+		public static void Stop(SubscribedTableKey tableKey)
 		{
 			lock(mutex)
 			{
 				if (client != null)
-					client.Stop();
+					client.Stop(tableKey);
 				client = null;
 			}
 		}
-
-		private static void Start()
-		{
-			lock(mutex)
-			{
-				client.Start(pushServerHost);
-			}
-		}
-
-
 
 	}
 
@@ -91,7 +76,7 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 	void OnApplicationQuit()
 	{
 		Debug.Log("Application is quitting");
-		LightstreamerSingleton.Stop();
+		LightstreamerSingleton.Stop(tableKey);
 	}
 
 	void OnDestroy()
@@ -99,7 +84,7 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 		// this works for the real game run, where OnApplicationQuit doesn't
 		// seem to be called.
 		Debug.Log("Object is being destroyed");
-		LightstreamerSingleton.Stop();
+		LightstreamerSingleton.Stop(tableKey);
 	}
 
 	void Start()
@@ -118,9 +103,15 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 			Debug.Log("Found TextMesh? => LightstreamerText" + boltCounter + "? => " + (obj != null));
 			boltCounter++;
 			if (obj != null) {
+				suscribedItemName = "item" + boltCounter;
+
+				string[] items = {suscribedItemName};
+
 				textMesh = (TextMesh)obj.GetComponent("TextMesh");
 				textMeshFound = true;
-				LightstreamerSingleton.Startup(this);
+				textMeshStr = suscribedItemName;
+				currentTextMeshStr = "";
+				tableKey = LightstreamerSingleton.Startup(this, items);
 			}
 		}
 		
@@ -198,8 +189,8 @@ public class LightningBolt : MonoBehaviour, ILightstreamerListener
 
 	public void OnItemUpdate(int itemPos, string itemName, IUpdateInfo update)
 	{
-		if (textMeshFound) {
-			textMeshStr = update.ToString();
+		if (textMeshFound && suscribedItemName.Equals(itemName)) {
+			textMeshStr = update.GetNewValue(1) + ": " + update.GetNewValue(2); //update.ToString();
 		}
 		Debug.Log("OnItemUpdate: " + itemName + ", update: " + update);
 	}

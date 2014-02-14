@@ -10,32 +10,17 @@ using Lightstreamer.DotNet.Client;
 
 class LightstreamerClient
 {
-    private string[] items;
-    private string[] fields;
-
-    private ILightstreamerListener listener;
     private LSClient client;
 	private StocklistConnectionListener ls;
-    private SubscribedTableKey tableKey;
 	private StocklistHandyTableListener hl;
 
-    public LightstreamerClient(
-        ILightstreamerListener listener,
-        string[] items, string[] fields)
+    public LightstreamerClient()
     {
-        if (listener == null)
-        {
-            throw new ArgumentNullException("listener is null");
-        }
-        this.items = items;
-        this.fields = fields;
-        this.listener = listener;
         client = new LSClient();
-
     }
 
-    public void Stop()
-    {
+	public void Stop(SubscribedTableKey tableKey)
+	{
         if (tableKey != null)
             client.UnsubscribeTable(tableKey);
         tableKey = null;
@@ -47,24 +32,30 @@ class LightstreamerClient
         ConnectionInfo connInfo = new ConnectionInfo();
         connInfo.PushServerUrl = pushServerUrl;
         connInfo.Adapter = "DEMO";
-        ls = new StocklistConnectionListener(listener);
+        ls = new StocklistConnectionListener();
         client.OpenConnection(connInfo, ls);
-
-        SimpleTableInfo tableInfo = new ExtendedTableInfo(
-            items, "MERGE", fields, true);
-        tableInfo.DataAdapter = "QUOTE_ADAPTER";
-		
-		hl = new StocklistHandyTableListener(listener);
-        tableKey = client.SubscribeTable(tableInfo, hl, false);
+		hl = new StocklistHandyTableListener();
     }
 
-	public void AppendListener(ILightstreamerListener listener)
+	public SubscribedTableKey AppendListener(ILightstreamerListener listener, string[] items, string[] fields)
 	{
+		SubscribedTableKey tableKey = null;
+		if (listener == null)
+		{
+			throw new ArgumentNullException("listener is null");
+		}
 		if (ls != null)
 			ls.AppendListener(listener);
-		if (hl != null)
-			hl.AppendListener(listener);
+		if (hl != null) {
+			hl.AppendListener (listener);
 		
+			SimpleTableInfo tableInfo = new ExtendedTableInfo (
+				items, "MERGE", fields, true);
+			tableInfo.DataAdapter = "QUOTE_ADAPTER";
+			tableKey = client.SubscribeTable (tableInfo, hl, false);
+		}
+
+		return tableKey;
 	}
 
 }
