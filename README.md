@@ -34,12 +34,16 @@ For any inquiry, please email support@lightstreamer.com.
 
 ## Install
 
+If you want to install a version of this demo pointing to your local Lightstreamer Server, follow these steps
+
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
 * Download the deploy.zip file that you can find in the [deploy release](https://github.com/Weswit/Lightstreamer-example-StockList-client-unity/releases) of this project and extract the "UnityStockListDemo" folder.
 * Launch UnityDemo.exe (please note that the demo try to connect to http://localhost:8080).
 
 ## Build
+
+To build your own version of UnityDemo.exe, instead of using the one provided in the deploy.zip file from the Install section above, follow these steps.
 
 The Unity 3D Development platform must be installed in order to build and run this demo. 
 This demo is a modified version of the official Unity [Procedural Examples] (https://www.assetstore.unity3d.com/#/content/5141) demo. In particular, the "Lightning Bolt" demo (Lightning Bolt.unity file) is the one containing the modified Lightstreamer .NET Client library code.
