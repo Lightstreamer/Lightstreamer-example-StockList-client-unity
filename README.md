@@ -12,7 +12,7 @@ This project includes a demo client showing the integration between a modified v
 
 ## Details
 
-At this time, Unity 3D support is experimental and some features may not work. Specifically, the Web Player build (the non-NaCL version) is known to NOT work. Moreover, the Android build fails due to errors in the original Unity 3D code.
+At this time, Unity 3D support is experimental and some features may not work. Specifically, the Web Player build (the non-NaCL version) is known to NOT work. Moreover, the Android build fails due to errors in the original Unity 3D code.<br>
 This demo is a modified version of the official Unity [Procedural Examples] (https://www.assetstore.unity3d.com/#/content/5141) demo. In particular, the "Lightning Bolt" demo (`Lightning Bolt.unity` file) is the one containing the modified Lightstreamer .NET Client library code.
 
 ### Dig the Code
