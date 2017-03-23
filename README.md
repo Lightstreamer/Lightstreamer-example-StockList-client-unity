@@ -7,7 +7,7 @@ This project includes a demo client showing the integration between a modified v
 ## Live Demo
 
 [![Demo ScreenShot](screen_unity_large.png)](http://demos.lightstreamer.com/UnityDemo/UnityStockListDemo.zip)<br>
-###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/UnityDemo/UnityStockListDemo.zip)<br>
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/UnityDemo/UnityStockListDemo.zip)<br>
 (download UnityStockListDemo.zip; unzip it; launch UnityStockListDemo.exe)
 
 ## Details
