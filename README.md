@@ -10,7 +10,7 @@ This project includes a demo client showing the integration between a modified v
 ### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/UnityDemo/UnityStockListDemo.zip)<br>
 (download UnityStockListDemo.zip; unzip it; launch UnityStockListDemo.exe)
 
-Please consider that this code is obsolete. For an up-to-date example of integration between [Lightstreamer server](https://www.lightstreamer.com/) and the [Unity 2017 Development platform](https://unity3d.com/) refer to this: [Lightstreamer - Basic Demo - Unity Client](https://github.com/Lightstreamer/Lightstreamer-example-basic2-client-unity)
+<b>Please consider that this code is obsolete.</b> For an up-to-date example of integration between [Lightstreamer server](https://www.lightstreamer.com/) and the [Unity 2017 Development platform](https://unity3d.com/) refer to this: [Lightstreamer - Basic Demo - Unity Client](https://github.com/Lightstreamer/Lightstreamer-example-basic2-client-unity)
 
 ## Details
 
