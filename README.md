@@ -83,5 +83,4 @@ To use the Java-based version of the Policy Server: compile it with command `jav
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer .NET Client API version 2.1 or newer.
-* For Lightstreamer Allegro (+ .NET Client API support), Presto, Vivace.
+* Compatible with Lightstreamer .NET Client API version 2.1 to 4.0.
